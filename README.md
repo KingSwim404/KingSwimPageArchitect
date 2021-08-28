@@ -1,0 +1,2 @@
+# KingSwimPageArchitect
+init
