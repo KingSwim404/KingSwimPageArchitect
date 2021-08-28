@@ -3,7 +3,6 @@ package com.kingswim.baselibrary
 import android.app.Application
 import com.blankj.utilcode.util.ThreadUtils
 import kotlin.concurrent.thread
-
 abstract class BaseApplication: Application() {
 
     private val mainTask = mutableListOf<InitTask>()

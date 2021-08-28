@@ -8,3 +8,7 @@ include ':Examples'
 include ':BusinessAModule'
 include ':BusinessBModule'
 include ':BaseWeb'
+include ':TrainingJavaOrKotlin'
+includeBuild("AppConfig")
+rootProject.name = "KingSwimPageArchitect"
+

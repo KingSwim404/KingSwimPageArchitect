@@ -1,6 +1,9 @@
+import com.kingswim.config.AppLibsConfig
+
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'com.kingswim.config'
 }
 
 android {
@@ -34,29 +37,22 @@ android {
 dependencies {
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-    //JSON解析
-    implementation 'com.google.code.gson:gson:2.8.6'
-    //Http
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.20'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
-    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation AppLibsConfig.AndroidX.core
+    implementation AppLibsConfig.AndroidX.appcompat
+    implementation AppLibsConfig.Android.material
+    testImplementation AppLibsConfig.Test.junit
+    androidTestImplementation AppLibsConfig.Test.testExt
+    androidTestImplementation AppLibsConfig.Test.espresso
 
 
-    //模拟数据库
-    implementation 'com.github.KingSwim404:KingSwimMock:1.0.1'
-
-    //超强工具类：
-    //https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
-    api 'com.blankj:utilcodex:1.30.6'
+    implementation AppLibsConfig.Json.gson
+    implementation AppLibsConfig.Http.retrofit2
+    implementation AppLibsConfig.Http.converterGson
+    implementation AppLibsConfig.Http.adapterRxjava2
+    implementation AppLibsConfig.RxJava.rxjava2
+    implementation AppLibsConfig.RxJava.rxandroid
+    implementation AppLibsConfig.Http.okhttp3
+    implementation AppLibsConfig.ThirdPartyLogic.mock
+    implementation AppLibsConfig.ThirdPartyLogic.blankjUtil
 
 }
