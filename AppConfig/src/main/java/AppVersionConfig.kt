@@ -1,5 +1,4 @@
-package com.kingswim.config
-
+@Suppress("unused")
 object AppVersionConfig {
 
     const val applicationId = "com.example.kingswim"

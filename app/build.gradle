@@ -1,4 +1,3 @@
-import com.kingswim.config.AppVersionConfig
 
 plugins {
     id 'com.android.application'

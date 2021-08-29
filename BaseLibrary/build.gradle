@@ -1,4 +1,4 @@
-import com.kingswim.config.AppLibsConfig
+
 
 plugins {
     id 'com.android.library'
@@ -37,22 +37,22 @@ android {
 dependencies {
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation AppLibsConfig.AndroidX.core
-    implementation AppLibsConfig.AndroidX.appcompat
-    implementation AppLibsConfig.Android.material
-    testImplementation AppLibsConfig.Test.junit
-    androidTestImplementation AppLibsConfig.Test.testExt
-    androidTestImplementation AppLibsConfig.Test.espresso
+    implementation AppLibsConfig.core
+    implementation AppLibsConfig.appcompat
+    implementation AppLibsConfig.material
+    testImplementation AppLibsConfig.junit
+    androidTestImplementation AppLibsConfig.testExt
+    androidTestImplementation AppLibsConfig.espresso
 
 
-    implementation AppLibsConfig.Json.gson
-    implementation AppLibsConfig.Http.retrofit2
-    implementation AppLibsConfig.Http.converterGson
-    implementation AppLibsConfig.Http.adapterRxjava2
-    implementation AppLibsConfig.RxJava.rxjava2
-    implementation AppLibsConfig.RxJava.rxandroid
-    implementation AppLibsConfig.Http.okhttp3
-    implementation AppLibsConfig.ThirdPartyLogic.mock
-    implementation AppLibsConfig.ThirdPartyLogic.blankjUtil
+    implementation AppLibsConfig.gson
+    implementation AppLibsConfig.retrofit2
+    implementation AppLibsConfig.converterGson
+    implementation AppLibsConfig.adapterRxjava2
+    implementation AppLibsConfig.rxjava2
+    implementation AppLibsConfig.rxandroid
+    implementation AppLibsConfig.okhttp3
+    implementation AppLibsConfig.mock
+    implementation AppLibsConfig.blankjUtil
 
 }
